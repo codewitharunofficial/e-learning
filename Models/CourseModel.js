@@ -23,12 +23,24 @@ const CourseSchema = new mongoose.Schema({
     category: {
         type: String,
         required: true,
-        enum: ["Front-End Web Dev", "Back-End Web Dev", "Full-Stack Web Dev", "Software Development"]
     },
     duration: {
         type: String,
         required: true
-    }
+    },
+    enrolls: {
+        type: []
+    },
+    level: {
+        type: String,
+        default: "All",
+        enum: ["Beginner", "Intermediate", "Advance", "All"]
+    }, 
+    popularity: {
+        type: Number,
+        default: 5,
+        enum: [5, 4, 3, 2, 1]
+    },
 }, {timestamps: true});
 
 export default mongoose.model("Course", CourseSchema);

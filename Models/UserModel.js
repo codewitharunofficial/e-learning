@@ -44,7 +44,7 @@ const UserSchema = new mongoose.Schema({
         default: "User",
         enum: ["Admin", "User"]
     },
-    course: {
+    enrolledCourses: {
         type: []
     }
 }, {timestamps: true});

@@ -20,7 +20,7 @@ const OTPSchema = new mongoose.Schema({
 
     expiresAt: {
         type: Date,
-        default: () => new Date(+ new Date() + 1*60*1000)
+        default: () => new Date(+ new Date() + 5*60*1000)
     },
 }, {timestamps: true});
 
